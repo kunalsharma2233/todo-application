@@ -1,0 +1,50 @@
+plurals
+----------
+/users
+/users/1
+/users/1/posts
+/users/1/posts/2
+
+
+Without Plurals
+---------------
+/user
+/user/1
+/user/1/post
+/user/1/post/2
+
+------------------------
+
+Swagger openapi-doc details
+	<dependency>
+			<groupId>org.springdoc</groupId>
+			<artifactId>springdoc-openapi-starter-webmvc-ui</artifactId>
+			<version>2.1.0</version>
+		</dependency>
+		
+		#Above dependency needs to be add in the pom.xml 
+		#swagger-ui helps in building the ui documentation of the REST API that we are building
+		#to check the documentation of the ui use below link
+		http://localhost:8080/swagger-ui/index.html
+		
+----------------------------
+
+1) Internalization i18n
+For the languages we need configuration in property file and their implementation.
+for this we need to create a property file in resource folder by the name same as messages.properties
+Spring and Spring boot provides MessageSource class that binds proper messages with respective languages.
+
+-----------------------------------
+
+
+Mysql Configuration 
+Steps
+
+1) To start docker for mysql command in linux
+docker run --detach 
+--env MYSQL_ROOT_PASSWORD=dummypassword 
+--env MYSQL_USER=social-media-user 
+--env MYSQL_PASSWORD=dummypassword 
+--env MYSQL_DATABASE=social-media-database 
+--name mysql 
+--publish 3306:3306 mysql:8-oracle

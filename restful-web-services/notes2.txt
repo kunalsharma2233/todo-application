@@ -1,0 +1,14 @@
+Spring Security
+
+
+Filter Chains
+
+1) All requests should be authenticated
+2) If a request is not authenticated, a web page is shown
+3) CSRF -> POST, PUT
+
+Steps for implementation
+Note ; To make filterChain customized we need write again the filterChain from scratch
+
+1) Create a configuration file/class
+2) Bean FilterChain
